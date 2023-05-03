@@ -1,0 +1,99 @@
+.container{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 1rem;
+}
+.container1{
+    display: grid;
+    grid-template-columns: 2rem 0.5fr 1fr 3.5fr 0.6fr 3rem;
+}
+
+.icon{
+    grid-column: 2/3;
+    background-color: aquamarine;
+    border-radius: 40rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.Links{
+    grid-column: 4/5;
+    justify-content: flex-start;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+.btn {
+    display: none;
+}
+.button{
+    grid-template-columns: 5/6;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+@media screen and (max-width: 1100px){
+
+    .button{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }  
+}
+@media screen and  (max-width: 1000px){
+   .container1{
+    display: grid;
+    grid-template-columns: 2rem 0.5fr 3fr 0.8fr 2rem;
+   }
+   .Links{
+    grid-column: 3/4;
+    justify-content: flex-end;
+   }
+   .buttonDiv{
+    display: flex;
+    justify-content: flex-end;
+   }
+}
+@media screen and  (max-width: 800px){
+    .Links{
+        font-size: 1.2rem;
+    }
+    .button{
+        height: 2.4rem;
+        padding: 0;
+        width: 4.7rem;
+        justify-content: center;
+        padding-top: 0.2rem;
+    }
+}
+@media screen and  (max-width: 650px){
+    .Links{
+        font-size: 1rem;
+    }
+}
+@media screen and  (max-width: 600px){
+    .container1{
+        display: grid;
+        grid-template-columns: 2rem 1fr 2fr 1fr 2rem;
+    }
+    .Links{
+        display: none;
+    }
+    .buttonDiv{
+        display: none;
+    }
+    .btn{
+        display: flex;
+        grid-column: 4;
+        font-size: 2rem;
+    }
+    .mobileLinks {
+        grid-column: 4;
+    }
+}
