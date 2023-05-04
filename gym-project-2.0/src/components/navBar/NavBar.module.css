@@ -80,7 +80,7 @@
 @media screen and  (max-width: 600px){
     .container1{
         display: grid;
-        grid-template-columns: 2rem 1fr 2fr 1fr 2rem;
+        grid-template-columns: 2rem 1fr 1fr 2fr 2rem;
     }
     .Links{
         display: none;
@@ -92,8 +92,13 @@
         display: flex;
         grid-column: 4;
         font-size: 2rem;
+        justify-content: center;
     }
     .mobileLinks {
         grid-column: 4;
+        display: flex;
+        flex-direction: column;
+        font-size: 5vw;
+        align-items: center;
     }
 }

@@ -1,0 +1,39 @@
+.Maindiv{
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100vw;
+}
+.container1{
+    display: flex;
+    justify-content: space-around;
+}
+iframe{
+    width: 30vw;
+    height: 40vh;
+}
+.container2{
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (max-width: 700px) {
+    .container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    iframe{
+        width: 70vw;
+        height: 50vh;
+    }
+
+    .container2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
