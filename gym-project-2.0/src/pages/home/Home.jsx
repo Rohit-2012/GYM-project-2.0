@@ -37,8 +37,10 @@ function Home() {
   });
   return (
     <div className={style.div}>
-      <h1>Home Page</h1>
       <img className={style.image} src={Array[data].image} alt="gym" />
+      <div className={style.header}>
+        <p>No Pain No Gain</p>
+      </div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ function Footer() {
         <div className={style.container1}>
           <p>COMPANY</p>
           <ul>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/about">AboutUs</Link>
             <Link to="/training">Traning</Link>
             <a href="#">Term and conditions</a>
