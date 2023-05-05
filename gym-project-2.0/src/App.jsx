@@ -1,12 +1,10 @@
 import {Routes, Route} from 'react-router-dom'
-import './App.css'
 import Home from './pages/home/Home'
 import AboutUs from './pages/about-us/AboutUs'
 import Programs from './pages/programs/Programs'
-import Training from './pages/training/Training'
+import Trainer from './pages/trainer/Trainer'
 import Pricing from './pages/pricing/Pricing'
 import JoinUs from './pages/join-us/JoinUs'
-import LogIn from './pages/logIn/LogIn'
 import Footer from './components/footer/Footer'
 import NavBar from './components/navBar/NavBar'
 
@@ -20,10 +18,10 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<AboutUs/>}/>
         <Route path='/program' element={<Programs/>}/>
-        <Route path='/training' element={<Training/>}/>
+        <Route path='/trainer' element={<Trainer/>}/>
         <Route path='/pricing' element={<Pricing/>}/>
-        <Route path='/register' element={<JoinUs/>}/>
-        <Route path='/login' element={<LogIn/>}/>
+        <Route path='/joining' element={<JoinUs/>}/>
+        <Route path='/*' element={<div style={{height:'55vh'}}><h1>404: Page Not Found</h1></div>}/>
       </Routes>
       <Footer/>
     </div>
