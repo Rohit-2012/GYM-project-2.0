@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import TrainerBanner from '../../components/trainerBanner/TrainerBanner'
 import Background from '../../components/background/Background'
 import TrainingProgram from '../../components/trainingProgram/TrainingProgram'
-import styles from './Programs.module.css'
+// import styles from './Programs.module.css'
 
 
 export default function TrainingProgramPage() {

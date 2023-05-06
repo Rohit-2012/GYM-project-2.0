@@ -10,7 +10,7 @@ function Pricing() {
   const auth = useRecoilValue(authAtom)
 
   const handleSubscription= ()=>{
-    if(auth.isLoggedIn=== false){
+    if(!auth.isLoggedIn){
       alert('Please Register First')
     }
     else{

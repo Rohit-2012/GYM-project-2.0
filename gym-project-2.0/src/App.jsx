@@ -38,6 +38,7 @@ function App() {
     isFirstRender.current = false
   }, [auth])
 
+  
   return (
     <div>
     <NavBar/>
