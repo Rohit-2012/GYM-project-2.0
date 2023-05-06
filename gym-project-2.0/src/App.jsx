@@ -21,7 +21,7 @@ function App() {
 
   useEffect(()=>{
     if(isFirstRender.current){
-      const authFromLocal = JSON.parse(localStorage.getItem('auth'))
+      const authFromLocal = JSON.parse(localStorage.getItem('auth'))||[]
       setAuth(authFromLocal)
     }
     else{
