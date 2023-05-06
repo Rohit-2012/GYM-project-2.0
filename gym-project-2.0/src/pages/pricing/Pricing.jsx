@@ -2,22 +2,35 @@ import React from "react";
 import style from "./Pricing.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
+import { useRecoilValue } from "recoil";
+import { authAtom } from "../../components/Atom";
 
 
 function Pricing() {
+  const auth = useRecoilValue(authAtom)
+
+  const handleSubscription= ()=>{
+    if(auth.isLoggedIn=== false){
+      alert('Please Register First')
+    }
+    else{
+      alert('Subscription successfully purchased')
+    }
+  }
+
   return (
     <>
       <div>
       </div>
       <div className={style.Main_Container}>
-        <Comonent1 />
-        <Component2 />
+        <Comonent1 callbackFunc={handleSubscription}/>
+        <Component2 callbackFunc={handleSubscription}/>
         <Component3 />
       </div>
     </>
   );
 }
-const Comonent1 = () => {
+const Comonent1 = ({callbackFunc}) => {
   return (
     <div className={style.Wrapper}>
       <div className={style.box}>
@@ -47,12 +60,12 @@ const Comonent1 = () => {
           24 hour Access
         </p>
       </div>
-      <button className={style.Wrapper_button}>GET STARTED</button>
+      <button className={style.Wrapper_button} onClick={callbackFunc}>GET STARTED</button>
     </div>
   );
 };
 
-function Component2() {
+function Component2({callbackFunc}) {
   return (
     <div className={style.Wrapper2}>
       <div className={style.box}>
@@ -94,7 +107,7 @@ function Component2() {
           24 Hours Access
         </p>
       </div>
-      <button className={style.Wrapper2_button}>GET STARTED</button>
+      <button className={style.Wrapper2_button} onClick={callbackFunc}>GET STARTED</button>
     </div>
   );
 }
