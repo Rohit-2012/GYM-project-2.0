@@ -124,7 +124,6 @@ export default function JoinUs() {
                             isLoggedIn:true
                         }
                     })
-                    // navigate('/')
             navigate('/')
         } else {
             setFound(false)

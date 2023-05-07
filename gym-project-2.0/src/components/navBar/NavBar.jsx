@@ -33,14 +33,14 @@ function NavBar() {
         </div>
         <div className={style.btn}>
           {isVisible ? (
-            <ImCross onClick={() => setIsVisible(false)} />
+            <GiHamburgerMenu onClick={() => setIsVisible(false)} />
           ) : (
-            <GiHamburgerMenu onClick={() => setIsVisible(true)} />
+            <ImCross onClick={() => setIsVisible(true)} />
           )}
         </div>
         <div
-          className={isVisible ? style.mobileLinks : style.Links}
-          onClick={() => setIsVisible(false)}
+          className={isVisible ? style.Links : style.mobileLinks}
+          // onClick={() => setIsVisible(false)}
         >
           
           <Link to={"/about"} style={{textDecoration:'none', color:'white'}}>About Us</Link>

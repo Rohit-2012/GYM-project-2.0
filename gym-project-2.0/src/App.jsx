@@ -14,7 +14,6 @@ import { useEffect, useRef } from 'react'
 
 
 function App() {
-
   const [auth, setAuth] = useRecoilState(authAtom)
   const navigate = useNavigate()
   const isFirstRender = useRef(true)
