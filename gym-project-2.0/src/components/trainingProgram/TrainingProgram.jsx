@@ -52,7 +52,7 @@ export default function TrainingProgram() {
   const handleSlideChangeRight = () => {
     setCurrentIndex(currentIndex === data.length - 3 ? 0 : currentIndex + 1);
   };
-  console.log(currentIndex);
+  // console.log(currentIndex);
 
   return (
     <Fragment>

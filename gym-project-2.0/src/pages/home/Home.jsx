@@ -7,8 +7,19 @@ import { slideData } from "../../utilities/HomePageSliderData";
 import TrainerMain from "../../components/trainerMain/TrainerMain";
 import TrainerBanner from "../../components/trainerBanner/TrainerBanner";
 import { useNavigate } from "react-router";
+import { useRecoilValue } from "recoil";
+import { authAtom } from "../../components/Atom";
 
 export default function Home() {
+  const auth = useRecoilValue(authAtom)
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    if(!auth.isLoggedIn){
+      navigate('/joining')
+    }
+  },[auth])
+
   return (
     <Fragment>
       <div>

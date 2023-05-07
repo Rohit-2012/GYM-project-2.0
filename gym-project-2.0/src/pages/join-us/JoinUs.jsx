@@ -2,6 +2,9 @@ import React, { Fragment, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './JoinUs.module.css'
 import Button from '../../components/button/Button'
+import { useSetRecoilState } from 'recoil'
+import { authAtom } from '../../components/Atom'
+
 
 export default function JoinUs() {
     const [name, setName] = useState('')
@@ -16,11 +19,13 @@ export default function JoinUs() {
     const [found, setFound] = useState(false)
     const [clicked, setClicked] = useState(false)
     const [error, setError] = useState(false)
-    const navigate = useNavigate()
     const [emailError, setEmailError] = useState(false)
     const [passwordError, setPasswordError] = useState(false)
+    
 
-
+    
+    const setAuth = useSetRecoilState(authAtom)
+    const navigate = useNavigate()
 
 
     function handleAlreadyHave() {
@@ -80,8 +85,9 @@ export default function JoinUs() {
 
                 if (notFound === false) {
                     const localStore = { name: name, email: email, mobile: mobile, password: password }
-
                     localStorage.setItem('userData', JSON.stringify([...existingData, localStore]))
+
+                   
                 } else {
                     setName('')
                     setEmail('')
@@ -113,6 +119,12 @@ export default function JoinUs() {
         if (exist) {
             setFound(true)
             alert('Successfully Logged In')
+             setAuth((auth)=>{
+                        return{
+                            isLoggedIn:true
+                        }
+                    })
+                    // navigate('/')
             navigate('/')
         } else {
             setFound(false)

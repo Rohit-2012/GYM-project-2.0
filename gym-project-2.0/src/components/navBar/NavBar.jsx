@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import Button from "../button/Button";
+import { useSetRecoilState, useRecoilValue } from "recoil";
+import { authAtom } from "../Atom";
+
 
 function NavBar() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const setAuth = useSetRecoilState(authAtom)
+  const auth = useRecoilValue(authAtom)
+
   return (
     <div className={style.container}>
       <div className={style.container1}>
@@ -40,6 +47,11 @@ function NavBar() {
           <Link to={"/program"} style={{textDecoration:'none', color:'white'}}>Program</Link>
           <Link to={"/trainer"} style={{textDecoration:'none', color:'white'}}>Trainer</Link>
           <Link to={"/pricing"} style={{textDecoration:'none', color:'white'}}>Pricing</Link>
+          {auth.isLoggedIn?(<span style={{color:'white', cursor:'pointer'}} onClick={()=>{
+            setAuth({
+              isLoggedIn:false
+            })
+          }}>Logout</span>):''}
           <Link to={'/joining'}><Button name= 'Join Us'/></Link>
         </div>
       </div>

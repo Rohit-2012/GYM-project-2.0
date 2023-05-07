@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import TMS from './TrainerMain.module.css'
-import TrainerCard from '../TrainerCard/TrainerCard'
+import TrainerCard from '../trainerCard/TrainerCard'
 
 export default function TrainerMain({ show }) {
   return (
