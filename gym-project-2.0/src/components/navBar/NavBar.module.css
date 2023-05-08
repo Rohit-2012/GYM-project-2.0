@@ -7,8 +7,10 @@
     opacity: 0.9;
 }
 .container1{
-    display: grid;
-    grid-template-columns: 2rem 0.5fr 1fr 3.5fr 0.6fr 3rem;
+    /* display: grid;
+    grid-template-columns: 2rem 0.5fr 1fr 3.5fr 0.6fr 3rem; */
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .icon{
@@ -22,10 +24,18 @@
     font-size: 2.5rem;
 }
 .Links{
-    grid-column: 4/5;
+    /* grid-column: 4/5; */
+    display: flex;
+    gap: 2rem;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.5rem;
+}
+.mobileLinks{
     display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
     font-size: 1.5rem;
 }
 .btn {
