@@ -9,10 +9,10 @@ Welcome to the Gym-Website project! This repository showcases a modern and dynam
 - **Booking System:** The website incorporates a convenient class schedule and booking system, allowing users to reserve their spot in group fitness classes with ease.
 
 ## Tech Stack
--React.JS
--React-router
--React-icons
--CSS
+- React.JS
+- React-router
+- React-icons
+- CSS
 
 ## Installation
 To install and run the application locally, follow these steps:
